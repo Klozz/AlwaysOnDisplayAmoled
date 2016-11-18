@@ -2,6 +2,7 @@
 [<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="60">](https://f-droid.org/app/com.tomer.alwayson)
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on GOogle Play" height="60">](https://play.google.com/store/apps/details?id=com.tomer.alwayson)
 [<img src="ART/amazon-underground-app-us-black.png" alt="Available at Amazon" height="60">](https://www.amazon.com/Tomers-Apps-Always-On-AMOLED/dp/B01M0KRJV3)
+[<img src="ART/apkmirror.png" alt="Available at APKMirror" height="60">](http://www.apkmirror.com/apk/tomer-rosenfeld/always-on-amoled-beta/)
 
 ##Contributing
 You can view a list of known issues and feature requests using [the issue tracker](
@@ -23,4 +24,7 @@ Copyright 2016 Tomer Rosenfeld
 Always On Display is licensed under the GNU v3 Public License.
 
 In addition to the terms set by the GNU v3 Public License, I ask that if you use any code from this repository that you send me a message to let me know.
+Moreover, I do not permit redistribution of this application on the Google Play Store.
+
+Feel free to contact me for more information.
 ```

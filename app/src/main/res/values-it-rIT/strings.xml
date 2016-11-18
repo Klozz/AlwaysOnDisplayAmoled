@@ -5,17 +5,17 @@
   <!--Actions-->
   <string name="unlock">Attiva lo schermo</string>
   <string name="action_revert">Ripristina</string>
-  <string name="menu_feedback">Feedback</string>
+  <string name="menu_feedback">Dicci cosa ne penzi</string>
   <string name="menu_rate">Valuta l\'app</string>
   <string name="action_restart">Riavvia ora</string>
   <string name="never_show_again">Non mostrare più</string>
   <!--Support-->
   <string name="action_support_the_development">Sostieni lo Sviluppatore</string>
-  <string name="support_how_much">Quanto vorresti donare?</string>
+  <string name="support_how_much">Quanto vuoi donare?</string>
   <string name="supporter_feature_only">Questa funzionalità è disponibile solo per i sostenitori, puoi scegliere quanto donare per diventare sostenitore, quanto vorresti donare?</string>
-  <string name="support_choose">Quanto vorresti donare?</string>
+  <string name="support_choose">Quanto vuoi donare?</string>
   <string name="support_1">Sblocca</string>
-  <string name="support_2">Fai una donazione</string>
+  <string name="support_2">Dona</string>
   <string name="support_5">Grossa donazione</string>
   <string name="support_10">Eccezionale donazione</string>
   <string name="support_20">Ingente donazione</string>
@@ -41,10 +41,12 @@
   <string name="intro_checkbox_double_tap">Doppio tap nel centro dello schermo per sbloccare</string>
   <string name="intro_notifications">Avvisi notifiche</string>
   <string name="intro_notifications_desc">Vuoi ricevere notifiche da altre applicazioni mentre lo schermo è in stato \"always on\"? Se lo vuoi, fai clic sul pulsante \"consenti ora\"</string>
+  <!--Developer page-->
   <!--Feedback,Toasts & messages-->
   <string name="thanks">Grazie per il tuo supporto! :)</string>
   <string name="notification_message">Always-on è in esecuzione</string>
   <string name="toast_thanks">Grazie</string>
+  <string name="toast_thanks_rate">Grazie per aver scaricato l\'applicazione! Per piacere valutala 5 stelle! (Per noi conta al tua opinione)</string>
   <!--Quick settings-->
   <string name="quick_settings_title">Always on</string>
   <string name="quick_settings_service_active">abilitato</string>
@@ -122,8 +124,6 @@
   <string name="settings_general">Generale</string>
   <string name="settings_shortcuts">Scorciatoie</string>
   <string name="settings_wake_up">Risveglia</string>
-  <string name="gestures_action_speak">Dice l\'ora attuale, le notifiche e lo stato della batteria ad alta voce</string>
-  <string name="gestures_action_flashlight">Toggle torcia</string>
   <string name="settings_rules">Regole automatiche</string>
   <string name="settings_samsung">Samsung</string>
   <!--Settings titles-->
@@ -159,10 +159,10 @@
   <string name="settings_translate">Tradurre</string>
   <string name="settings_github">GitHub</string>
   <string name="settings_community">Community</string>
-  <string name="greenify_integration">Integrazione Greenify</string>
   <string name="settings_licenses">Licenze</string>
   <string name="settings_uninstall">Disinstalla</string>
   <string name="settings_exit_animation">Animazione</string>
+  <string name="settings_raise_to_wake">Aumenta per svegliare (instabile)</string>
   <string name="settings_app_version">Versione</string>
   <string name="settings_enable_greenify">Abilita Greenify</string>
   <string name="settings_battery_saver">Modalità risparmio batteria</string>
@@ -179,7 +179,6 @@
   <string name="settings_proximity_to_lock_desc">Blocca il dispositivo quando metti il telefono in tasca per risparmiare batteria (il sensore potrebbe usare molta batteria)</string>
   <string name="settings_licenses_desc">Licenze open source</string>
   <string name="settings_community_desc">Comunità di Google Plus</string>
-  <string name="settings_about_twitter_desc">Seguimi su Twitter per notizie, aggiornamenti e omaggi</string>
   <string name="settings_github_desc">Link open source di Github</string>
   <string name="settings_move_desc">Attiva questa opzione per evitare il burn in dello schermo AMOLED</string>
   <string name="settings_font_size_desc">Imposta la dimensione del carattere dell\'orologio</string>
@@ -219,15 +218,8 @@
   <string name="settings_watch_ticks">Classico 12H con tacche dell\'ora</string>
   <string name="settings_watch_digital_s7">Orologio digitale stile S7</string>
   <string name="settings_watch_flat_analog">Stile piatto analogico</string>
-  <string name="settings_about_twitter">Twitter</string>
   <string name="settings_watch_analog_pebble">Orologio analogico stile Pebble</string>
   <string name="settings_watch_flat_red_analog">Analogico piatto (lancette rosse)</string>
-  <string name="move_disable">Disabilitato (non raccomandato per schermi AMOLED)</string>
-  <string name="move_move">Muovi automaticamente il widget</string>
-  <string name="move_move_animation">Muovi automaticamente il widget con un\'animazione</string>
-  <string name="greenify_integration_desc">Abilita Greenify mentre il servizio always on è visibile per migliorare significativamente la durata della batteria. Assicurarsi di abilitare Greenify nelle impostazioni di accessibilità</string>
-  <string name="greenify_integration_desc_found">Assicurati di abilitare Greenify nelle impostazioni di accessibilità e scegliere le applicazioni che desideri ibernazione mentre il dispositivo è bloccato. Fai clic qui per configurare Greenify</string>
-  <string name="greenify_integration_desc_not_found">Installa Greenify per migliorare la durata della batteria</string>
   <string name="settings_notifications_alerts_preview_desc">Visualizza il contenuto della notifica quando ricevuto</string>
   <string name="settings_notifications_alerts_preview">Contenuto notifica</string>
   <string name="settings_doze_desc">Abilita Doze mentre l\'always on screen è attivo per risparmiare batteria (solo root)</string>
@@ -239,4 +231,6 @@
   <string name="settings_battery_saver_desc">Riduce il consumo e il surriscaldamento batteria. Funziona meglio con il root.</string>
   <string name="settings_watchface_date_desc">Scegli lo stile di data che vuoi vedere</string>
   <string name="settings_gestures_home_button_dismiss_desc">Clicca sul tasto home per uscire da always on screen. Questo disabiliterà il sensore di impronte digitali di always on screen.</string>
+  <string name="settings_raise_to_wake_desc">Seleziona per mostrare sul tuo dispositivo the always on screen per 10 secondi invece di avere lo schermo visibile tutto il tempo</string>
+  <string name="settings_raise_to_wake_device_admin">Concedere l\'autorizzazione di admin del dispositivo all\'applicazione per essere in grado di bloccare lo schermo</string>
 </resources>

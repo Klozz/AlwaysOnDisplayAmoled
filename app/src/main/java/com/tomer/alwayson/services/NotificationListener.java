@@ -16,6 +16,8 @@ import com.tomer.alwayson.ContextConstatns;
 import com.tomer.alwayson.Globals;
 import com.tomer.alwayson.helpers.Utils;
 
+import java.util.Map;
+
 public class NotificationListener extends NotificationListenerService implements ContextConstatns {
 
     @Override
@@ -48,8 +50,11 @@ public class NotificationListener extends NotificationListenerService implements
             } catch (PackageManager.NameNotFoundException e) {
                 e.printStackTrace();
             }
-            Globals.newNotification = new NotificationHolder(this, title, content, icon, notificationAppInfo != null ? getPackageManager().getApplicationLabel(notificationAppInfo) : null, added.getNotification().contentIntent);
-            Globals.notifications.put(getUniqueKey(added), Globals.newNotification);
+            if(Globals.newNotification()!=null){
+                Globals.notifications.get(Globals.newNotification()).setNew(false);
+            }
+            NotificationHolder newNotification = new NotificationHolder(title, content, icon, notificationAppInfo != null ? getPackageManager().getApplicationLabel(notificationAppInfo) : null, added.getNotification().contentIntent, true);
+            Globals.notifications.put(getUniqueKey(added), newNotification);
         }
         sendBroadcast(new Intent(NEW_NOTIFICATION));
     }
@@ -61,38 +66,42 @@ public class NotificationListener extends NotificationListenerService implements
     }
 
     private String getUniqueKey(StatusBarNotification notification) {
-        return notification.getPackageName().concat(":").concat(String.valueOf(notification.getId()));
+        return notification.getPackageName();
     }
 
+
     private Drawable getIcon(StatusBarNotification notification) {
-        if (Utils.isAndroidNewerThanM()) {
+        if (Utils.isAndroidNewerThanM())
             return notification.getNotification().getSmallIcon().loadDrawable(this);
-        } else {
-            return getResources().getDrawable(notification.getNotification().icon);
-        }
+        else
+            return ContextCompat.getDrawable(getApplicationContext(), notification.getNotification().icon);
     }
+
+
 
     public static class NotificationHolder {
         private String appName;
         private Drawable icon;
         private String title, message;
-        private Context context;
         private PendingIntent intent;
+        private boolean isNew;
 
-        public NotificationHolder(Context context, String title, String message, Drawable icon, CharSequence appName, PendingIntent intent) {
+
+        NotificationHolder(String title, String message, Drawable icon, CharSequence appName, PendingIntent intent, boolean newnotification) {
             this.icon = icon;
             this.title = title;
             this.message = message;
-            this.context = context;
             this.appName = (String) appName;
             if (this.message.equals("null"))
                 this.message = "";
             if (this.title.equals("null"))
                 this.title = "";
             this.intent = intent;
+            this.isNew = newnotification;
         }
 
-        public Drawable getIcon() {
+
+        public Drawable getIcon(Context context) {
             if (icon != null)
                 icon.mutate().setColorFilter(ContextCompat.getColor(context, android.R.color.primary_text_dark), PorterDuff.Mode.MULTIPLY);
             return icon;
@@ -113,5 +122,10 @@ public class NotificationListener extends NotificationListenerService implements
         public PendingIntent getIntent() {
             return intent;
         }
+
+        public boolean getNew(){return isNew;}
+
+        public void setNew(boolean x){isNew = x;}
+
     }
 }

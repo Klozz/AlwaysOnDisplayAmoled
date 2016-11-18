@@ -4,7 +4,7 @@
   <!--App name & Activities title-->
   <!--Actions-->
   <string name="unlock">Encender la pantalla</string>
-  <string name="action_revert">Volver</string>
+  <string name="action_revert">Deshacer</string>
   <string name="menu_feedback">Opiniones</string>
   <string name="menu_rate">Valora esta aplicación</string>
   <string name="action_restart">Reiniciar ahora</string>
@@ -19,11 +19,13 @@
   <string name="support_5">Donación grande</string>
   <string name="support_10">Donación increíble</string>
   <string name="support_20">Gran donación</string>
+  <string name="support_25">Super donation!</string>
   <string name="support_1_desc">Desbloquear todas las características premium de la aplicación y apoyar el desarrollo</string>
   <string name="support_2_desc">Apoyar el desarrollo un poco más. Mismas características que el desbloqueo normal.</string>
-  <string name="support_5_desc">Donar al proyecto y me ayudan a seguir trabajando en la aplicación. Mismas características que el desbloqueo normal.</string>
+  <string name="support_5_desc">Dona al proyecto y ayúdame a seguir trabajando en la aplicación. Mismas características que el desbloqueo normal.</string>
   <string name="support_10_desc">Demuestra que aprecia el proyecto y mantiene el desarrollo activo. Mismas características que el desbloqueo normal.</string>
   <string name="support_20_desc">¡Wow! una enorme donación! ¡Muchas gracias! :) Mismas características que el desbloqueo normal.</string>
+  <string name="support_25_desc">¡Increíble! ¡Eso es un montón de dinero! Esto realmente le ayudará al proyecto! Mismas características que el regular de desbloqueo.</string>
   <!--Intro-->
   <string name="intro_allow_now">Permitir</string>
   <string name="intro_permissions">Leer el estado del dispositivo</string>
@@ -39,11 +41,14 @@
   <string name="intro_checkbox_double_tap">Toca dos veces en el centro de la pantalla para desbloquear</string>
   <string name="intro_notifications">Notificaciones</string>
   <string name="intro_notifications_desc">¿Quieres recibir notificaciones de otras aplicaciones mientras la pantalla está en el estado \"Always On\"? Si quieres, selecciona el botón \"Permitir\"</string>
+  <!--Developer page-->
   <!--Feedback,Toasts & messages-->
   <string name="thanks">¡Gracias por tu apoyo! :)</string>
-  <string name="notification_message">Always On está ejecutándose</string>
+  <string name="notification_message">Siempre se está ejecutando</string>
+  <string name="toast_thanks">¡Gracias</string>
+  <string name="toast_thanks_rate">¡Gracias! Por favor califique la aplicación en play store :)</string>
   <!--Quick settings-->
-  <string name="quick_settings_title">Always on</string>
+  <string name="quick_settings_title">Siempre encendido</string>
   <string name="quick_settings_service_active">activado</string>
   <string name="quick_settings_service_inactive">desactivado</string>
   <!-- Content description-->
@@ -119,13 +124,13 @@
   <string name="settings_general">General</string>
   <string name="settings_shortcuts">Atajos</string>
   <string name="settings_wake_up">Gestos y acciónes</string>
-  <string name="gestures_action_speak">Decir el tiempo actual, las notificaciones y el estado de bateria en voz alta</string>
-  <string name="gestures_action_flashlight">Alternar linterna</string>
   <string name="settings_rules">Reglas Automáticas</string>
+  <string name="settings_samsung">Samsung</string>
   <!--Settings titles-->
   <string name="settings_enabled">Habilitar</string>
   <string name="settings_disable_volume_keys">Desactivar teclas de volumen</string>
   <string name="settings_double_tap_wake">Acción de doble toque</string>
+  <string name="settings_gestures_home_button_dismiss">Desbloqueo de botón home</string>
   <string name="settings_back_button_wake">Acción de botón atras</string>
   <string name="settings_volume_to_stop">Acción de las teclas de volumen</string>
   <string name="settings_swipe_up">Acción al deslizar hacia arriba</string>
@@ -154,10 +159,10 @@
   <string name="settings_translate">Traducir</string>
   <string name="settings_github">GitHub</string>
   <string name="settings_community">Comunidad</string>
-  <string name="greenify_integration">Integracion con Greenify</string>
   <string name="settings_licenses">Licencias</string>
   <string name="settings_uninstall">Desinstalar</string>
   <string name="settings_exit_animation">Animacion</string>
+  <string name="settings_raise_to_wake">Subida a despertar (inestable)</string>
   <string name="settings_app_version">Versión</string>
   <string name="settings_enable_greenify">Activar Greenify</string>
   <string name="settings_battery_saver">Modo ahorro de energía</string>
@@ -174,7 +179,6 @@
   <string name="settings_proximity_to_lock_desc">Bloquea el dispositivo cuando lo metes en el bolsillo para ahorrar batería (Los sensores pueden gastar más bateria)</string>
   <string name="settings_licenses_desc">Licencias de codigo abierto</string>
   <string name="settings_community_desc">Comunidad Google Plus</string>
-  <string name="settings_about_twitter_desc">Sígueme en Twitter para noticias, actualizaciones y regalos</string>
   <string name="settings_github_desc">Código abierto en Github</string>
   <string name="settings_move_desc">Habilitar para evitar quemadura de algunos píxeles la pantalla AMOLED</string>
   <string name="settings_font_size_desc">Tamaño de fuente del reloj</string>
@@ -214,15 +218,8 @@
   <string name="settings_watch_ticks">Reloj de 12 horas clásico con agujas</string>
   <string name="settings_watch_digital_s7">Reloj digital de estilo S7</string>
   <string name="settings_watch_flat_analog">Estilo analógico plano</string>
-  <string name="settings_about_twitter">Twitter</string>
   <string name="settings_watch_analog_pebble">Estilo del reloj analogico Pebble</string>
   <string name="settings_watch_flat_red_analog">Estilo plano analógico (rojo)</string>
-  <string name="move_disable">Desactivado (no recomendado para pantallas AMOLED)</string>
-  <string name="move_move">Mover el widget automaticamente</string>
-  <string name="move_move_animation">Mover el widget automaticamente con una animacion</string>
-  <string name="greenify_integration_desc">Activa Greenify cuando Always On se activa. Esto sirve para alargar la duracion de la bateria. Asegurate de tener activado Greenify en las opciones de accesibilidad</string>
-  <string name="greenify_integration_desc_found">Asegúrese de habilitar Greenify en las configuraciones de accesibilidad y elija las aplicaciones que quiera que hibernen mientras el dispositivo está bloqueado. Haga click aquí para configurar Greenify</string>
-  <string name="greenify_integration_desc_not_found">Instale Greenify para ahorrar batería</string>
   <string name="settings_notifications_alerts_preview_desc">Muestra el contenido de las notificaciones recibidas</string>
   <string name="settings_notifications_alerts_preview">Contenido de las notificaciones</string>
   <string name="settings_doze_desc">Habilite doze mientras Always on screen está activo para ahorrar batería (sólo root)</string>
@@ -231,6 +228,9 @@
   <string name="settings_memo_hint">Escriba su nota aquí. Será mostrada en tu Always on screen.</string>
   <string name="settings_google_now_shortcut_desc">Detenga el Always on screen cuando Google Now es lanzado diciendo OK Google (Puede no funcionar con el launcher Google Now)</string>
   <string name="settings_exit_animation_desc">Elige animación de desbloqueo</string>
-  <string name="settings_battery_saver_desc">Reduce el consumo de la batería y el sobrecalentamiento. Funciona mejor con root.</string>
+  <string name="settings_battery_saver_desc">Reduce el consumo de la batería y el sobrecalentamiento. Funciona mejor con root</string>
   <string name="settings_watchface_date_desc">Elige el estilo de fecha que desea ver</string>
+  <string name="settings_gestures_home_button_dismiss_desc">Presione el botón home para salir de \"Always On Screen\". Esto desactiva siempre el sensor de huellas digitales.</string>
+  <string name="settings_raise_to_wake_desc">Recoger su dispositivo para mostrar siempre en la pantalla durante 10 segundos en lugar de tener la pantalla visible todo el tiempo</string>
+  <string name="settings_raise_to_wake_device_admin">Conceder permiso de administrador de dispositivo para ser capaces de bloquear la pantalla de la aplicación</string>
 </resources>

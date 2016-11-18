@@ -64,6 +64,7 @@ import com.tomer.alwayson.views.IconsWrapper;
 import com.tomer.alwayson.views.MessageBox;
 import com.tomer.alwayson.views.MusicPlayer;
 
+
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Timer;
@@ -109,13 +110,15 @@ public class MainService extends Service implements SensorEventListener, Context
     private CurrentAppResolver currentAppResolver;
     private Flashlight flashlight;
     private Handler UIHandler;
+
+
     private BroadcastReceiver newNotificationBroadcast = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (prefs.notificationsAlerts)
                 UIHandler.post(() -> iconsWrapper.update(prefs.textColor, () -> stopThis()));
-            if (Globals.newNotification != null && prefs.notificationPreview) {
-                UIHandler.post(() -> notificationsMessageBox.showNotification(Globals.newNotification));
+            if (Globals.newNotification() != null && prefs.notificationPreview) {
+                UIHandler.post(() -> notificationsMessageBox.showNotification(Globals.notifications.get(Globals.newNotification())));
                 notificationsMessageBox.setOnClickListener(view -> {
                     stoppedByShortcut = true;
                     if (notificationsMessageBox.getCurrentNotification().getIntent() != null) {
@@ -152,7 +155,8 @@ public class MainService extends Service implements SensorEventListener, Context
                 if (!Settings.canDrawOverlays(this)) {
                     Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:" + getPackageName()));
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(intent);
+                    if (Utils.doesIntentExist(this, intent))
+                        startActivity(intent);
                     return super.onStartCommand(origIntent, flags, startId);
                 }
 
@@ -312,6 +316,10 @@ public class MainService extends Service implements SensorEventListener, Context
 
         //Notification setup
         registerReceiver(newNotificationBroadcast, new IntentFilter(NEW_NOTIFICATION));
+        if(Globals.newNotification() == null){
+            notificationsMessageBox.clearNotificationBox();
+        }
+
 
         //Turn screen on
         new Handler().postDelayed(

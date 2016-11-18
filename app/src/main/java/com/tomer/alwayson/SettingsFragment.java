@@ -236,8 +236,9 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
             Notices notices = new Notices();
             notices.addNotice(new Notice("AppIntro", "https://github.com/PaoloRotolo/AppIntro", "Copyright 2015 Paolo Rotolo ,  Copyright 2016 Maximilian Narr", new ApacheSoftwareLicense20()));
             notices.addNotice(new Notice("android-issue-reporter", "https://github.com/HeinrichReimer/android-issue-reporter", "", new ApacheSoftwareLicense20()));
+            notices.addNotice(new Notice("ButterKnife", "https://github.com/JakeWharton/butterknife", "Copyright 2013 Jake Wharton", new ApacheSoftwareLicense20()));
             notices.addNotice(new Notice("Custom Analog Clock View", "https://github.com/rosenpin/custom-analog-clock-view", "Copyright (C) 2016 Tomer Rosenfeld", new GnuGeneralPublicLicense30()));
-            notices.addNotice(new Notice("IntegrationPreference", "https://github.com/tasomaniac/IntegrationPreference", "", new ApacheSoftwareLicense20()));
+            notices.addNotice(new Notice("CircleImageView", "https://github.com/hdodenhof/CircleImageView", "Copyright 2014 - 2016 Henning Dodenhof", new ApacheSoftwareLicense20()));
             notices.addNotice(new Notice("LicensesDialog", "https://github.com/PSDev/LicensesDialog", "", new ApacheSoftwareLicense20()));
             notices.addNotice(new Notice("material-dialogs", "https://github.com/afollestad/material-dialogs", "Copyright (c) 2014-2016 Aidan Michael Follestad", new MITLicense()));
             new LicensesDialog.Builder(getActivity())
@@ -431,7 +432,13 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
     @Override
     public boolean onPreferenceClick(Preference preference) {
         if (preference.getKey().equals("textcolor")) {
-            Globals.colorDialog.show();
+            if (Globals.colorDialog != null)
+                Globals.colorDialog.show();
+            else
+                Snackbar.make(rootView, R.string.error_3_unknown_error_restart, Snackbar.LENGTH_LONG).setAction(R.string.action_restart, v -> {
+                    getActivity().finish();
+                    context.startActivity(new Intent(context, PreferencesActivity.class));
+                }).show();
         } else if (preference.getKey().equals("uninstall")) {
             Utils.logDebug(MAIN_ACTIVITY_LOG_TAG, "uninstall clicked");
             PreferencesActivity.uninstall(context, prefs);
@@ -499,7 +506,7 @@ public class SettingsFragment extends PreferenceFragment implements Preference.O
             findPreference("stop_delay").setSummary("%s");
         findPreference("watchface_clock").setSummary(context.getResources().getStringArray(R.array.customize_clock)[prefs.clockStyle]);
         findPreference("watchface_date").setSummary(context.getResources().getStringArray(R.array.customize_date)[prefs.dateStyle]);
-        findPreference("greenify_enabled").setSummary(isPackageInstalled("com.oasisfeng.greenify") ? context.getString(R.string.greenify_integration_desc) : context.getString(R.string.greenify_integration_desc_not_found));
+        findPreference("greenify_enabled").setSummary(isPackageInstalled("com.oasisfeng.greenify") ? context.getString(R.string.settings_greenify_integration_desc) : context.getString(R.string.settings_greenify_integration_desc_not_found));
         if (!isPackageInstalled("com.oasisfeng.greenify")) {
             ((SwitchPreference) findPreference("greenify_enabled")).setChecked(false);
         }

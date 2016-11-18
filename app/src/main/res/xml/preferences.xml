@@ -179,7 +179,7 @@
             android:summary="%s"
             android:title="@string/settings_orientation" />
         <com.tomer.alwayson.views.SeekBarPreference
-            android:defaultValue="15"
+            android:defaultValue="12"
             android:dialogTitle="@string/settings_brightness_desc"
             android:key="brightness"
             android:max="200"
@@ -223,7 +223,7 @@
             android:summary="@string/settings_startafterlock_desc"
             android:title="@string/settings_startafterlock" />
         <com.afollestad.materialdialogs.prefs.MaterialListPreference
-            android:defaultValue="2"
+            android:defaultValue="1"
             android:dialogTitle="@string/settings_move_desc"
             android:entries="@array/settings_move"
             android:entryValues="@array/settings_move_values"
@@ -250,8 +250,8 @@
         <SwitchPreference
             android:defaultValue="false"
             android:key="greenify_enabled"
-            android:summary="@string/greenify_integration_desc"
-            android:title="@string/greenify_integration" />
+            android:summary="@string/settings_greenify_integration_desc"
+            android:title="@string/settings_greenify_integration" />
         <CheckBoxPreference
             android:defaultValue="false"
             android:key="disable_volume_keys"
@@ -278,14 +278,9 @@
             android:summary="@string/settings_about_translate"
             android:title="@string/settings_translate"
             app:url="https://crowdin.com/project/always-on-amoled" />
-        <com.tomer.alwayson.views.URLPreference
-            android:summary="@string/settings_github_desc"
-            android:title="@string/settings_github"
-            app:url="https://github.com/rosenpin/AlwaysOnDisplayAmoled" />
-        <com.tomer.alwayson.views.URLPreference
-            android:summary="@string/settings_about_twitter_desc"
-            android:title="@string/settings_about_twitter"
-            app:url="http://www.twitter.com/Rosenpin" />
+        <com.tomer.alwayson.views.DeveloperPreference
+            android:summary="@string/settings_developer_desc"
+            android:title="@string/settings_developer"/>
         <Preference
             android:key="open_source_licenses"
             android:summary="@string/settings_licenses_desc"

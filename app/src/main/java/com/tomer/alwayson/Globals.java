@@ -18,5 +18,16 @@ public class Globals {
     public static Map<String, NotificationListener.NotificationHolder> notifications = new ConcurrentHashMap<>();
     public static ColorChooserDialog.Builder colorDialog;
     public static ArrayList<String> ownedItems;
-    public static NotificationListener.NotificationHolder newNotification;
+    
+    public static String newNotification() {
+        if (Globals.notifications != null)
+            for (Map.Entry<String, NotificationListener.NotificationHolder> entry : Globals.notifications.entrySet()) {
+                if (entry != null)
+                    if (entry.getValue() != null)
+                        if (entry.getValue().getNew())
+                            if (entry.getKey() != null)
+                                return entry.getKey();
+            }
+        return null;
+    }
 }

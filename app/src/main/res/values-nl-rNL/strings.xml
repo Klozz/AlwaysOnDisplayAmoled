@@ -3,8 +3,8 @@
 <resources>
   <!--App name & Activities title-->
   <!--Actions-->
-  <string name="unlock">Zet het scherm aan</string>
-  <string name="action_revert">Ongedaan maken</string>
+  <string name="unlock">Schakel scherm in</string>
+  <string name="action_revert">Terugzetten</string>
   <string name="menu_feedback">Een probleem melden</string>
   <string name="menu_rate">Beoordeel de app</string>
   <string name="action_restart">Nu herstarten</string>
@@ -13,6 +13,19 @@
   <string name="action_support_the_development">Ondersteun de ontwikkelaar</string>
   <string name="support_how_much">Hoeveel zou je willen doneren?</string>
   <string name="supporter_feature_only">Deze functie is alleen beschikbaar voor donateurs, je kunt kiezen hoeveel je wilt doneren om een supporter te worden, hoeveel zou je willen doneren?</string>
+  <string name="support_choose">Hoeveel wil je doneren?</string>
+  <string name="support_1">Ontgrendel</string>
+  <string name="support_2">Doneer</string>
+  <string name="support_5">Grote donatie</string>
+  <string name="support_10">Geweldige donatie</string>
+  <string name="support_20">Enorme donatie</string>
+  <string name="support_25">Gigantische donatie!</string>
+  <string name="support_1_desc">Ontgrendel alle premium functies van de app en steun de ontwikkelaars</string>
+  <string name="support_2_desc">Ondersteun de ontwikkelaars iets meer. Dezelfde functies als de standaard donatie.</string>
+  <string name="support_5_desc">Doneer aan het project en help mij door te gaan met de applicatie. Dezelfde functies als de standaard donatie.</string>
+  <string name="support_10_desc">Laat zien dat je het project waardeerd en zorg dat ontwikkeling ervan blijft doorgaan. Dezelfde functies als de standaard donatie.</string>
+  <string name="support_20_desc">Geweldig! Een enorme donatie! Heel erg bedankt! :) Dezelfde functies als de standaard donatie.</string>
+  <string name="support_25_desc">Geweldig! Dat is veel geld zeg! Dit helpt het project enorm! Dezelfde functies als de standaard donatie.</string>
   <!--Intro-->
   <string name="intro_allow_now">Nu toestaan</string>
   <string name="intro_permissions">Lees telefoonstatus</string>
@@ -28,9 +41,12 @@
   <string name="intro_checkbox_double_tap">Dubbel klikken in het midden van het scherm om te ontgrendelen</string>
   <string name="intro_notifications">Meldingen van notificaties</string>
   <string name="intro_notifications_desc">Wil je notificaties van andere apps krijgen terwijl het always on scherm aan staan? Wanneer je dit wilt klik dan op de \"nu toestaan\" knop</string>
+  <!--Developer page-->
   <!--Feedback,Toasts & messages-->
   <string name="thanks">Bedankt voor je support! :)</string>
   <string name="notification_message">Altijd Aan is ingeschakeld</string>
+  <string name="toast_thanks">Bedankt</string>
+  <string name="toast_thanks_rate">Bedankt! Geef de applicatie a.u.b. een beoordeling in de play store :)</string>
   <!--Quick settings-->
   <string name="quick_settings_title">Altijd aan</string>
   <string name="quick_settings_service_active">ingeschakeld</string>
@@ -53,6 +69,7 @@
   <string name="error_2_plugin_not_installed">PLUGIN IS NIET GEÏNSTALLEERD</string>
   <string name="error_3_unknown_error_restart">Er is een fout opgetreden. Start de app opnieuw.</string>
   <string name="error_4_tasker_service_not_initialized">De dienst is niet correct geïnitialiseerd</string>
+  <string name="error_5_camera_cant_connect_desc">Kan niet verbinden met de camera. Er kan iets mis zijn met uw apparaat.</string>
   <!--Warnings-->
   <string name="warning_1_harm_performance">Dit kan de snelheid van de applicatie beïnvloeden</string>
   <string name="warning_4_device_not_secured">Je apparaat is mogelijk nu niet beschermd</string>
@@ -93,6 +110,13 @@
   <string name="rules_orientation_vertical">Verticaal</string>
   <string name="rules_orientation_horizontal">Horizontaal</string>
   <!-- Other labels -->
+  <string name="md_back_label">Terug</string>
+  <string name="md_cancel_label">Annuleer</string>
+  <string name="md_choose_label">Kies</string>
+  <string name="md_custom_label">Aangepast</string>
+  <string name="md_done_label">Klaar</string>
+  <string name="md_error_label">Fout</string>
+  <string name="md_presets_label">Voorkeursinstellingen</string>
   <!--Settings headers-->
   <string name="settings_behaviour">Gedrag</string>
   <string name="settings_about">Over</string>
@@ -100,14 +124,17 @@
   <string name="settings_general">Algemeen</string>
   <string name="settings_shortcuts">Snelkoppelingen</string>
   <string name="settings_wake_up">Scherm aan</string>
-  <string name="gestures_action_speak">Huidige tijd, meldingen en batterij status hardop zeggen</string>
   <string name="settings_rules">Automatische regels</string>
+  <string name="settings_samsung">Samsung</string>
   <!--Settings titles-->
   <string name="settings_enabled">Aan zetten</string>
   <string name="settings_disable_volume_keys">Zet volumeknoppen uit</string>
   <string name="settings_double_tap_wake">Actie voor dubbel klikken</string>
+  <string name="settings_gestures_home_button_dismiss">Home-knop ontgrendelt</string>
   <string name="settings_back_button_wake">Actie voor terugknop</string>
   <string name="settings_volume_to_stop">Volume knop om aan te doen</string>
+  <string name="settings_swipe_up">Actie voor omhoog swipen</string>
+  <string name="settings_swipe_down">Actie voor omlaag swipen</string>
   <string name="settings_brightness">Helderheid</string>
   <string name="settings_doze">Doze modus</string>
   <string name="settings_google_now_shortcut">Sta Google Now toe</string>
@@ -132,11 +159,13 @@
   <string name="settings_translate">Vertaal</string>
   <string name="settings_github">GitHub</string>
   <string name="settings_community">Community</string>
-  <string name="greenify_integration">Greenify integratie</string>
   <string name="settings_licenses">Licenties</string>
   <string name="settings_uninstall">Deinstalleer</string>
   <string name="settings_exit_animation">Animatie</string>
+  <string name="settings_raise_to_wake">Til op om te wekken (onstabiel)</string>
   <string name="settings_app_version">Versie</string>
+  <string name="settings_enable_greenify">Greenify Inschakelen</string>
+  <string name="settings_battery_saver">Energiebesparing</string>
   <!--Settings descriptions-->
   <string name="settings_stop_on_camera_desc">Stop het always on scherm wanneer de camera wordt gelanceerd (Moet aan blijven staan op Nexus/Samsung apparaten)</string>
   <string name="settings_auto_brightness_desc">Vermindering de schermhelderheid wanneer je in een donkere omgeving ben (Sensoren gebruiken mogelijk meer batterij)</string>
@@ -153,6 +182,7 @@
   <string name="settings_github_desc">Open source GitHub link</string>
   <string name="settings_move_desc">Schakel dit in om te voorkomen dat je AMOLED inbrandt</string>
   <string name="settings_font_size_desc">Verander de klokgrootte</string>
+  <string name="settings_font_size_memo_desc">Verander de tekstgrootte in je memo</string>
   <string name="settings_notifications_desc">Schakel dit in om de applicatie te laten draaien op de achtergrond </string>
   <string name="settings_enabled_desc">Zet de service aan</string>
   <string name="settings_disable_volume_keys_desc">Zet dit aan om zo niet per ongeluk het apparaatvolume te veranderen</string>
@@ -190,12 +220,6 @@
   <string name="settings_watch_flat_analog">Platte analoge stijl</string>
   <string name="settings_watch_analog_pebble">Pebble analoge klokstijl</string>
   <string name="settings_watch_flat_red_analog">Platte Analoog (Rode wijzerplaat)</string>
-  <string name="move_disable">Uitgeschakeld (niet aanbevolen voor AMOLED schermen)</string>
-  <string name="move_move">Laat de widget automatisch bewegen</string>
-  <string name="move_move_animation">Laat de widget automatisch met een animatie verplaatsen</string>
-  <string name="greenify_integration_desc">Gebruik Greenify wanneer de always on service aan staat om de batterij aanzienlijk te besparen. Zorg er voor dat Greenify aan staat bij de toegankelijkheids instellingen</string>
-  <string name="greenify_integration_desc_found">Zorg er voor dat Greenify aan staan in toegankelijkheidsinstelling en kies de apps die je in slaap wilt houden wanneer de telefoon vergrendeld is. Klik hier om Greenify te configureren</string>
-  <string name="greenify_integration_desc_not_found">Installeer Greenify om batterijduur te verbeteren</string>
   <string name="settings_notifications_alerts_preview_desc">Laat de inhoud van notificaties zien wanneer deze binnenkomen</string>
   <string name="settings_notifications_alerts_preview">Inhoud van notificaties</string>
   <string name="settings_doze_desc">Zorg dat doze modus actief wordt staat wanneer het always on scherm aan staat om batterij te besparen (alleen voor root)</string>
@@ -204,4 +228,9 @@
   <string name="settings_memo_hint">Typ je memo tekst hier. Deze zal in je always on scherm laten zien worden.</string>
   <string name="settings_google_now_shortcut_desc">Laat het always on scherm stoppen wanneer Google Now gelanceerd wordt als er OK Google gezegd wordt (Kan eventueel niet werken met de Google Now Launcher)</string>
   <string name="settings_exit_animation_desc">Kies de uitgangs animatie</string>
+  <string name="settings_battery_saver_desc">Verminder batterij verbruik en oververhitting. Werkt beter met root</string>
+  <string name="settings_watchface_date_desc">Kies de datum-stijl die u wilt gebruiken</string>
+  <string name="settings_gestures_home_button_dismiss_desc">Klik de home-knop om het altijd aan scherm te verlaten. Dit zal de altijd aan vingerafdruk scanner uitzetten.</string>
+  <string name="settings_raise_to_wake_desc">Til je apparaat op om het altijd-aan-scherm voor 10 seconden te tonen in plaats dat het scherm constant zichtbaar is</string>
+  <string name="settings_raise_to_wake_device_admin">Sta device admin toegang toe zodat de app het scherm kan locken</string>
 </resources>

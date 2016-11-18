@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
@@ -35,7 +36,7 @@ public class Utils implements ContextConstatns {
 
     private static Boolean isSamsung;
 
-    static boolean isPackageInstalled(Context context, String packageName) {
+    public static boolean isPackageInstalled(Context context, String packageName) {
         PackageManager pm = context.getPackageManager();
         try {
             pm.getPackageInfo(packageName, PackageManager.GET_ACTIVITIES);
@@ -43,6 +44,16 @@ public class Utils implements ContextConstatns {
         } catch (PackageManager.NameNotFoundException e) {
             return false;
         }
+    }
+
+    public static boolean isGooglePlayInstalled(Context context){
+        return isPackageInstalled(context, "com.android.vending");
+    }
+
+    public static boolean doesIntentExist(Context context, Intent intent) {
+        PackageManager mgr = context.getPackageManager();
+        List<ResolveInfo> list = mgr.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
+        return list.size() > 0;
     }
 
     public static void showErrorNotification(Context context, String title, String text, int id, PendingIntent onClickIntent) {
@@ -90,9 +101,7 @@ public class Utils implements ContextConstatns {
             return DateUtils.formatDateTime(context, Calendar.getInstance().getTime().getTime(),
                     DateUtils.FORMAT_SHOW_DATE
                             | DateUtils.FORMAT_SHOW_WEEKDAY
-                            | DateUtils.FORMAT_ABBREV_WEEKDAY
-                            | DateUtils.FORMAT_NO_YEAR
-                            | DateUtils.FORMAT_ABBREV_MONTH);
+                            | DateUtils.FORMAT_NO_YEAR).toUpperCase();
     }
 
     public static void killBackgroundProcesses(Context context) {

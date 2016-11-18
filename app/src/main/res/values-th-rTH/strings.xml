@@ -3,8 +3,10 @@
 <resources>
   <!--App name & Activities title-->
   <!--Actions-->
+  <string name="unlock">Turn the screen on</string>
   <!--Support-->
   <!--Intro-->
+  <!--Developer page-->
   <!--Feedback,Toasts & messages-->
   <!--Quick settings-->
   <!-- Content description-->

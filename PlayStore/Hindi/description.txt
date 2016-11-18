@@ -1,8 +1,8 @@
 अपने फ़ोन या टेबलेट के लिए एक हमेशा पर प्रदर्शन मिलता है।
-Keep your screen on all the time.
-The first open source always on app!
+अपने स्क्रीन पर सभी समय रखें!
+पहली खुला स्रोत app पर हमेशा!
 
-The idea is to provide users with information about, time, date, notifications and more and all without having to touch the phone. Just by looking at it.
+I m Just by looking at it.
 
 This is made possible thanks to AMOLED displays. Most of the screen stays black except for a few pixels.
 

@@ -11,7 +11,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.PowerManager;
 import android.provider.Settings;
 import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
@@ -132,7 +131,10 @@ public class PreferencesActivity extends AppCompatActivity implements ColorChoos
     private void donateButtonSetup() {
         Button donateButton = (Button) findViewById(R.id.donate);
         assert donateButton != null;
-        donateButton.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), DonateActivity.class)));
+        if (Utils.isGooglePlayInstalled(this))
+            donateButton.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), DonateActivity.class)));
+        else
+            donateButton.setOnClickListener(v -> Utils.openURL(PreferencesActivity.this, "https://www.patreon.com/user?u=2966388"));
     }
 
     private void handlePermissions() {

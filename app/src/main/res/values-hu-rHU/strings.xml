@@ -21,6 +21,7 @@
   <string name="support_25">Szuper támogatás!</string>
   <string name="support_1_desc">Oldd fel az összes szolgáltatást az alkalmazásban és támogasd a fejlesztőket</string>
   <string name="support_2_desc">Támogasd egy kicsit jobban a fejlesztőket. Ugyan azok a szolgáltatások, mint a sima feloldásnál.</string>
+  <string name="support_5_desc">Támogasd a projektet és segíts vele fejleszteni az alkalmazást. Ugyan azok az előnyök mint a sima feloldással.</string>
   <!--Intro-->
   <string name="intro_allow_now">Engedélyezés most</string>
   <string name="intro_modify_desc">Az alkalmazásnak szüksége van engedélyre, hogy változtassa az eszköz fényerősségét</string>
@@ -28,6 +29,7 @@
   <string name="intro_checkbox_swipe_up">Húzza fel a képernyő közepéről, hogy feloldja</string>
   <string name="intro_checkbox_double_tap">Kattintson duplán a képernyő közepére, hogy feloldja</string>
   <string name="intro_notifications_desc">Szeretné, hogy értesítéseket kapjon más alkalmazásoktól, miközben a képernyő \"állandóan bekapcsolt\" állapotban van? Ha igen, kattintson az \"engedélyezés most\" gombra</string>
+  <!--Developer page-->
   <!--Feedback,Toasts & messages-->
   <string name="thanks">Köszönjük támogatását! :)</string>
   <string name="notification_message">Az Always On fut</string>
@@ -86,8 +88,6 @@
   <string name="settings_about">Rólunk</string>
   <string name="settings_appearance">Megjelenés</string>
   <string name="settings_general">Általános</string>
-  <string name="gestures_action_speak">Aktuális idő, az értesítések és az akkumulátor állapotát hangosan mondani</string>
-  <string name="gestures_action_flashlight">Váltás elemlámpa</string>
   <!--Settings titles-->
   <string name="settings_brightness">Fényerő</string>
   <string name="settings_notifications">Értesítések</string>
@@ -98,7 +98,6 @@
   <string name="settings_translate">Fordítás</string>
   <string name="settings_github">GitHub</string>
   <string name="settings_community">Közösség</string>
-  <string name="greenify_integration">Greenify integráció</string>
   <string name="settings_licenses">Licencek</string>
   <string name="settings_uninstall">Eltávolítás</string>
   <string name="settings_app_version">Verzió</string>
@@ -117,5 +116,4 @@
   <string name="settings_font_monospace">Monospace</string>
   <string name="settings_watchface_text_font"><![CDATA[Szöveg & Betűtípus]]></string>
   <string name="settings_uninstall_desc">Alkalmazás eltávolítása</string>
-  <string name="settings_about_twitter">Twitter</string>
 </resources>

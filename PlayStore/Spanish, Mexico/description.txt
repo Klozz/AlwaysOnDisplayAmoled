@@ -20,7 +20,7 @@ Esto es posible gracias a la tecnología de las pantallas AMOLED. La mayor parte
 
 Antes de usar esta aplicación, habilita el permiso para "superponer esta aplicacion sobre otras".
 
-Esta aplicación es BETA, y por lo tanto todavía tiene bugs y le faltan características.
+La aplicación está en fase BETA, todavía tiene errores y carece de funciones.
 
 Permisos
 <b>Permisos de Cámara</b>
